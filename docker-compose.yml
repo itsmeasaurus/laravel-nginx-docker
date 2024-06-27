@@ -22,3 +22,9 @@ services:
       MYSQL_ROOT_PASSWORD: root
     volumes:
       - ./mysql:/var/lib/mysql
+  php:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src:/var/www/html
